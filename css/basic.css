@@ -1,0 +1,106 @@
+@charset "UTF-8";
+body {}
+
+/* 레이아웃 */
+#wrap{}
+    header{ 
+        height: 45px; 
+        background-color: #33353F;
+    }
+    #con_wrap{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+    }
+        #con_up{
+            flex:2;
+            display: flex;
+        }
+            .s1-1{ 
+                flex:1;
+            }
+            .con_up_right{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+                .s1-2{
+                    flex: 1;
+                }
+                .s1-3{ 
+                    flex: 1;
+                }
+        #con_down{
+            flex:1;
+            display: flex;                    
+        }
+            .s2-1{ 
+                flex: 1;
+            }
+            .s2-2{ 
+                flex: 1;
+            }
+
+    footer{
+        height: 100px;
+        background-color: #33353F;
+    }   
+
+
+/* header */
+header{
+    padding: 0 45px;
+    width: 100%;
+}
+    .lnb_btn{
+        float: left;
+        position: relative;
+        left: -45px;
+    }
+    .logo{
+        float: left;
+        width: 100%;
+        margin: 0 -45px;
+        text-align: center;
+        line-height: 1;
+    }
+    .search_btn{
+        float:right;
+        position: relative;
+        left:45px;
+    }
+header img{
+    height: 40px;
+}
+
+/*content */
+#con_wrap{ padding: 6px; }
+#con_wrap section{display: table;}
+section > a {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+    #con_up{ padding-bottom: 3px;}
+        .s1-1{ padding-right: 3px; display: table;}
+        .s1-1 a{ background-color: #4ab8bc; }
+        .s1-1 img{ width: 120px; }
+        .con_up_right{ padding-left: 3px;}
+            .s1-2{ padding-bottom: 3px;}
+            .s1-2 a{ background-color:  #589dd2;}
+            .s1-2 a img{ width: 110px; }
+
+            .s1-3 { padding-top: 3px;}
+            .s1-3 a{ background-color: #ff912f;}
+            .s1-3 a img{ width : 121px; }
+
+    #con_down{ padding-top: 3px;}
+        .s2-1{ padding-right: 3px;} 
+        .s2-1 a{ background-color: #589dd2;}
+        .s2-1 a img{ width: 124px; }
+        
+        .s2-2{ padding-left: 3px;}
+        .s2-2 a{ background-color: #8dca35;}
+        .s2-2 a img{ width: 131px; }
+
+
