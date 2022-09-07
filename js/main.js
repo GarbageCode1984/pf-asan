@@ -21,3 +21,23 @@ window.addEventListener("resize", function () {
     let con_wrap_Height = winH - (headerH + footerH);
     elcon_wrap.style.height = `${con_wrap_Height}`;
 });
+
+var du = 400;
+var open = 0;   //메뉴가 닫혀있는 상태(처음)
+
+//lnb 슬라이드 메뉴
+$('.lnb_btn').click(function(){
+    if(open === 0){ 
+        $('#wrap').animate({left:274}, du);
+        $('#lnb').animate({left:0}, du);
+        $('.cover').fadeIn(du);
+        $('.lnb_btn').find('img').attr({'src':'img/bg_header_lnb_active.png', 'alt': '메뉴닫기'});
+        open = 1;
+    } else {
+        $('#wrap').animate({left:0}, du);
+        $('#lnb').animate({left:-274}, du);
+        $('.cover').fadeOut(du);
+        $('.lnb_btn').find('img').attr({'src':'img/bg_header_lnb.png', 'alt': '메뉴열기'});
+        open = 0;
+    }
+});
